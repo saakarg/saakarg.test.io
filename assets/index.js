@@ -1,4 +1,12 @@
+'use strict'
+
+// Selectors
 const themeBtn = document.getElementById("theme_change");
+const lottieBtn = document.querySelector(".lottie-btn");
+const lottieContainer = document.querySelector(".lottie_container");
+const lottieItem = document.querySelector(".lottie_item");
+const audioBtn = document.querySelector(".audio-btn");
+const audios = [...document.getElementsByClassName("audio")];
 
 function changeTheme(selector) {
   if (selector.checked) {
@@ -12,28 +20,13 @@ function changeTheme(selector) {
 themeBtn.addEventListener("click", () => changeTheme(themeBtn));
 changeTheme(themeBtn);
 
-// A Comment
+lottieBtn.addEventListener("click", () => lottieItem.play());
+lottieItem.addEventListener("complete", () => lottieItem.stop());
 
-const lottieBtn = document.querySelector(".lottie-btn");
-const lottieContainer = document.querySelector(".lottie_container");
-const lottieItem = document.querySelector(".lottie_item");
-
-lottieBtn.addEventListener("click", () => {
-  lottieItem.play();
-});
-lottieItem.addEventListener("complete", () => {
-  lottieItem.stop();
-});
-
-// Audio
-const audioBtn = document.querySelector(".audio-btn");
-const audios = [...document.getElementsByClassName("audio")];
-
-// NOTE For Random Audio to play
+// NOTE: For Random Audio to play
 // Random number is generated
 let randomNum = Math.floor(Math.random() * audios.length),
   prevNum = randomNum;
-console.log(randomNum, prevNum);
 
 function playAudio() {
   if (audios[randomNum].paused) {
