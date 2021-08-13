@@ -2,5 +2,4 @@
 
 Link to the Page ¦ [saakarg.github.io](https://saakarg.github.io/)
 
-[Hero Section Lottie Link](https://lottiefiles.com/46472-lurking-cat)
-[Button onClick Lottie Link]()
+[Button onClick Lottie Link](https://lottiefiles.com/48401-ox-lantern-zodiac-lunar-new-year-2021)
